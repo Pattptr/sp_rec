@@ -15,7 +15,7 @@ def uploader():
       r = sr.Recognizer()
       with sr.AudioFile(f) as source:
          audio = r.listen(source)
-         text = r.recognize_google(audio, language='th-TH')
+         text = r.recognize_google(audio)
       #txtFile = open('text2.txt', 'a')
       #txtFile.writelines(text)
       f.save(secure_filename(f.filename))
